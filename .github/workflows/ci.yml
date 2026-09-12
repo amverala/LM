@@ -1,0 +1,61 @@
+1 name: Deploy MkDocs
+2
+3 on:
+4   push:
+5     branches:
+6       - main
+7 
+8 permissions:
+9   contents: read
+10  pages: write
+11  id-token: write
+12 
+13 concurrency:
+14  group: pages
+15  cancel-in-progress: true
+16  
+17 jobs:
+18  build:
+19    runs-on: ubuntu-latest
+20 
+21    steps:
+22      - name: Checkout
+23        uses: actions/checkout@v4
+24 
+25      - name: Configure Pages
+26        uses: actions/configure-pages@v5
+27 
+28      - name: Set up Python
+29        uses: actions/setup-python@v5
+30        with:
+31          python-version: "3.x"
+32 
+33      - name: Install dependencies
+34        run: |
+35          pip install -r requirements.txt
+36 
+37      - name: Build site
+38        run: mkdocs build
+39 
+40      - name: Upload artifact
+41        uses: actions/upload-pages-artifact@v3
+42        with:
+43          path: ./site
+44 
+45  deploy:
+46    needs: build
+47 
+48    runs-on: ubuntu-latest
+49 
+50    environment:
+51       name: github-pages
+52       url: ${{ steps.deployment.outputs.page_url }}
+53 
+54    permissions:
+55      pages: write
+56      id-token: write
+57 
+58    steps:
+59      - name: Deploy to GitHub Pages
+60        id: deployment
+61        uses: actions/deploy-pages@v4
