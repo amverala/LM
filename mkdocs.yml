@@ -1,0 +1,53 @@
+site_name: Lenguajes de Marcas
+site_description: Tema 1 · Estructura y significado del contenido digital
+theme:
+  name: material
+  language: es
+  font: false
+  favicon: assets/favicon.svg
+  icon:
+    logo: material/code-tags
+  palette:
+    - scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Cambiar a modo oscuro
+    - scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Cambiar a modo claro
+  features:
+    - navigation.sections
+    - navigation.footer
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+plugins:
+  - search:
+      lang: es
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - toc:
+      permalink: true
+extra_css:
+  - stylesheets/extra.css
+nav:
+  - Inicio: index.md
+  - Tema 1:
+      - 1. Qué es un lenguaje de marcas: tema-1/concepto.md
+      - 2. Origen y evolución: tema-1/historia.md
+      - 3. Tipos de marcado: tema-1/clasificacion.md
+      - 4. HTML, XML, Markdown y Wikitext: tema-1/lenguajes.md
+      - 5. Comparativa: tema-1/comparativa.md
+      - 6. Ejercicio: tema-1/ejercicio.md

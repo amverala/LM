@@ -1,0 +1,7 @@
+:root { --md-text-font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; --md-code-font: Consolas, monospace; }
+.md-typeset h1 { font-weight: 750; letter-spacing: -.035em; color: var(--md-default-fg-color); }
+.md-typeset h2 { font-weight: 650; }
+.md-typeset .md-button { margin: .35rem .4rem .35rem 0; border-radius: .35rem; }
+.exercise-preview { padding: 1.2rem 1.5rem; border: 1px solid var(--md-default-fg-color--lightest); border-radius: .5rem; margin: 1rem 0; }
+.exercise-preview h3 { margin: 0 0 .7rem; font-size: 1.65rem; font-weight: 750; border-bottom: 1px solid var(--md-default-fg-color--lightest); padding-bottom: .4rem; }
+.exercise-preview h4 { margin-top: 1rem; font-size: 1.2rem; }
