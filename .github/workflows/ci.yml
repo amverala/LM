@@ -42,20 +42,20 @@ jobs:
         with:
           path: ./site
 
-deploy:
+ deploy:
     needs: build
 
-runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-environment:
+    environment:
        name: github-pages
        url: ${{ steps.deployment.outputs.page_url }}
 
-permissions:
+    permissions:
      pages: write
      id-token: write
 
-steps:
+    steps:
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v4
