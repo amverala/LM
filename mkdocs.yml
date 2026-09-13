@@ -45,9 +45,9 @@ extra_css:
 nav:
   - Inicio: index.md
   - Unidad 1:
-      - 1. Qué es un lenguaje de marcas: tema-1/concepto.md
-      - 2. Origen y evolución: tema-1/historia.md
-      - 3. Tipos de marcado: tema-1/clasificacion.md
-      - 4. HTML, XML, Markdown y Wikitext: tema-1/lenguajes.md
-      - 5. Comparativa: tema-1/comparativa.md
-      - 6. Ejercicio: tema-1/ejercicio.md
+      - 1. Qué es un lenguaje de marcas: unidad-1/concepto.md
+      - 2. Origen y evolución: unidad-1/historia.md
+      - 3. Tipos de marcado: unidad-1/clasificacion.md
+      - 4. HTML, XML, Markdown y Wikitext: unidad-1/lenguajes.md
+      - 5. Comparativa: unidad-1/comparativa.md
+      - 6. Ejercicio: unidad-1/ejercicio.md
