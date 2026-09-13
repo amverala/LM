@@ -44,7 +44,7 @@ extra_css:
   - stylesheets/extra.css
 nav:
   - Inicio: index.md
-  - Tema 1:
+  - Unidad 1:
       - 1. Qué es un lenguaje de marcas: tema-1/concepto.md
       - 2. Origen y evolución: tema-1/historia.md
       - 3. Tipos de marcado: tema-1/clasificacion.md
