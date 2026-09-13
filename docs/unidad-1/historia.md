@@ -8,7 +8,7 @@ Los editores anotaban los manuscritos para indicar a los tipógrafos dónde colo
 
 ## Los primeros formatos digitales
 
-Cade programa podía guardar los documentos con sus propias convenciones. Intercambiar un archivo entre aplicaciones podía provocar incompatibilidades o pérdida de formato. Hacían falta formas comunes de representar la estructura.
+Cada programa podía guardar los documentos con sus propias convenciones. Intercambiar un archivo entre aplicaciones podía provocar incompatibilidades o pérdida de formato. Hacían falta formas comunes de representar la estructura.
 
 ## SGML: una base general
 

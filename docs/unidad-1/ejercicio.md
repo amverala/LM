@@ -25,7 +25,7 @@ La manzana es una fruta *deliciosa* y muy **saludable**. Es perfecta para cualqu
 3. El párrafo completo, con «deliciosa» en cursiva y «saludable» en negrita.
 4. Una lista no ordenada con Roja, Verde y Amarilla.
 
-No es necesario reproducir la tipografía exacta de la imagen del PDF: lo importante es mantener el contenido y su estructura.
+No es necesario reproducir la tipografía exacta; lo importante es mantener el contenido y su estructura.
 
 !!! tip "Pista"
     En Markdown, los encabezados comienzan con `#`. En Wikitext se delimitan con `=`. Revisa también cómo se representa el énfasis en cada lenguaje.

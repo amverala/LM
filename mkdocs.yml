@@ -1,5 +1,8 @@
 site_name: Lenguajes de Marcas
 site_description: Unidad 1 · Estructura y significado del contenido digital
+copyright: |
+   Material docente de Lenguajes de Marcas
+  
 theme:
   name: material
   language: es
