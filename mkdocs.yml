@@ -1,8 +1,8 @@
 site_name: Lenguajes de Marcas
-site_description: Unidad 1 · Estructura y significado del contenido digital
+#site_description: Unidad 1 · Estructura y significado del contenido digital
 copyright: |
    Material docente de Lenguajes de Marcas
-  
+
 theme:
   name: material
   language: es
@@ -24,7 +24,7 @@ theme:
         icon: material/weather-sunny
         name: Cambiar a modo claro
   features:
-    - navigation.sections
+   # - navigation.sections
     - navigation.footer
     - navigation.top
     - search.highlight
@@ -33,6 +33,7 @@ theme:
 plugins:
   - search:
       lang: es
+  - awesome-pages:
 markdown_extensions:
   - admonition
   - attr_list
@@ -45,12 +46,12 @@ markdown_extensions:
       permalink: true
 extra_css:
   - stylesheets/extra.css
-nav:
-  - Inicio: index.md
-  - Unidad 1:
-      - 1. Qué es un lenguaje de marcas: unidad-1/concepto.md
-      - 2. Origen y evolución: unidad-1/historia.md
-      - 3. Tipos de marcado: unidad-1/clasificacion.md
-      - 4. HTML, XML, Markdown y Wikitext: unidad-1/lenguajes.md
-      - 5. Comparativa: unidad-1/comparativa.md
-      - 6. Ejercicio: unidad-1/ejercicio.md
+#nav:
+#  - Inicio: index.md
+#  - Unidad 1:
+#      - 1. Qué es un lenguaje de marcas: unidad-1/concepto.md
+#      - 2. Origen y evolución: unidad-1/historia.md
+#      - 3. Tipos de marcado: unidad-1/clasificacion.md
+#      - 4. HTML, XML, Markdown y Wikitext: unidad-1/lenguajes.md
+#      - 5. Comparativa: unidad-1/comparativa.md
+#      - 6. Ejercicio: unidad-1/ejercicio.md
