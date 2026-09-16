@@ -34,6 +34,9 @@ plugins:
   - search:
       lang: es
   - awesome-pages:
+  - exclude:
+      glob:
+        - borradores/**
 markdown_extensions:
   - admonition
   - attr_list
