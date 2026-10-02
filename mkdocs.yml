@@ -42,19 +42,17 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
   - pymdownx.highlight:
       anchor_linenums: true
   - toc:
       permalink: true
 extra_css:
   - stylesheets/extra.css
-#nav:
-#  - Inicio: index.md
-#  - Unidad 1:
-#      - 1. Qué es un lenguaje de marcas: unidad-1/concepto.md
-#      - 2. Origen y evolución: unidad-1/historia.md
-#      - 3. Tipos de marcado: unidad-1/clasificacion.md
-#      - 4. HTML, XML, Markdown y Wikitext: unidad-1/lenguajes.md
-#      - 5. Comparativa: unidad-1/comparativa.md
-#      - 6. Ejercicio: unidad-1/ejercicio.md
+extra_javascript:
+  - https://unpkg.com/mermaid/dist/mermaid.min.js
+
+

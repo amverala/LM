@@ -1,0 +1,12 @@
+
+nav:
+  - index.md
+  - introduccion.md
+  - dtd.md
+  - dtd-interna-externa.md
+  - elementos.md
+  - atributos.md
+  - entidades.md
+  - comprobacion-validacion.md
+  - practica-guiada.md
+  - actividades.md
