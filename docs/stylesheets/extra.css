@@ -7,4 +7,32 @@
 .exercise-preview h4 { margin-top: 1rem; font-size: 1.2rem; }
 .md-copyright { font-size: 0;}
 .md-copyright-highlight { font-size: .64rem;}  
+/* Unidades aún no publicadas */
+.unidad-proximamente {
+    opacity: 0.5;
+    filter: grayscale(70%);
+    transition: opacity 0.3s ease;
+}
+
+.unidad-proximamente:hover {
+    opacity: 0.6;
+}
+/* Tarjetas de unidades */
+.grid.cards > ul > li {
+    border-top: 4px solid #009688;
+    transition: transform .2s ease;
+}
+
+.grid.cards > ul > li:hover {
+    transform: translateY(-3px);
+}
+
+.grid.cards > ul > li:last-child {
+    opacity: 0.45;
+    filter: grayscale(100%);
+    border-top: 4px solid #9e9e9e;
+}
+
+
+
 

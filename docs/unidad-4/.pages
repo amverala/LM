@@ -1,0 +1,17 @@
+
+nav:
+  - index.md
+  - 1. Introducción a XML Schema: introduccion.md
+  - 2. Espacios de nombres: namespaces.md
+  - 3. Estructura de un esquema XSD: xsd-estructura.md
+  - 4. Asociación entre XML y XSD: enlace-xml-xsd.md
+  - 5. Namespaces y validación: namespaces-validacion.md
+  - 6. Definición de elementos: elementos.md
+  - 7. Cardinalidad: cardinalidad.md
+  - 8. Declaración de atributos: atributos.md
+  - 9. Restricciones de datos: restricciones.md
+  - 10. Reutilización de tipos: reutilizacion.md
+  - 11. Documentación de esquemas: documentacion.md
+  - 12. Claves y referencias: key-keyref.md
+  - 13. Ejercicios voluntarios: ejercicios_voluntarios.md
+  - 14. Actividad entregable: actividad_entregable.md
