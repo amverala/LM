@@ -93,6 +93,8 @@ coche.xsd
 
 ## 5.4 El atributo schemaLocation
 
+Permite asociar un espacio de nombres con el archivo XSD que contiene las reglas de validación que debe seguir el documento XML.
+
 ```xml
 xsi:schemaLocation="
 http://www.empresa.com/vehiculos
@@ -111,6 +113,7 @@ Fichero:
 ```text
 coche.xml
 ```
+Este XML almacena una lista de coches y además indica qué espacio de nombres utiliza y qué esquema XSD debe emplearse para validarlo
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -134,6 +137,13 @@ coche.xml
 
 </c:coches>
 ```
+El elemento principal del documento es coches.
+
+El prefijo c indica que pertenece a un espacio de nombres determinado.
+
+Declara el prefijo xsi, que permite utilizar atributos relacionados con XML Schema.
+
+El XML contiene los datos, el namespace identifica el vocabulario utilizado y schemaLocation indica dónde está el archivo XSD que define las reglas de validación
 
 ## 5.6 Comparando ambos métodos
 
