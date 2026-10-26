@@ -116,6 +116,8 @@ Un tipo complejo es un elemento que contiene otros elementos y/o atributos.
 
 ## 6.5 Definiendo tipos complejos
 
+Un tipo simple contiene un único valor. Un tipo complejo contiene otros elementos, atributos o ambos. Por ello, cuando un elemento tiene estructura interna, debe definirse mediante **`xs:complexType.`**
+
 ```xml
 <xs:element name="persona">
 
@@ -172,7 +174,7 @@ Clasifica: xs:string, xs:boolean, xs:integer, xs:date.
 
 ??? tip "Solución"
 
-    No.
+    No. El valor veinte no sería válido porque xs:integer solo permite números enteros
 
 ### Ejercicio 3
 
@@ -188,7 +190,16 @@ Crea un elemento producto con nombre y precio.
 
 ??? tip "Solución"
 
-    Utilizar xs:complexType y xs:sequence.
+    ```xml
+    <xs:element name="producto">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nombre" type="xs:string"/>
+                <xs:element name="precio" type="xs:decimal"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    ```
 
 ### Ejercicio 5
 
@@ -196,8 +207,8 @@ Explica la diferencia entre un tipo simple y un tipo complejo.
 
 ??? tip "Solución"
 
-    El simple contiene datos; el complejo puede contener elementos y atributos.
-
+    Un **tipo simple** contiene un único valor y no puede incluir otros elementos ni atributos. En cambio, un elemento definido mediante **`xs:complexType`** puede contener otros elementos, atributos o ambos, permitiendo definir estructuras más completas.
+    
 ## Actividad de reflexión
 
 !!! question "Piensa"
