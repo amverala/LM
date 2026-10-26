@@ -309,6 +309,9 @@ Para definirlo utilizamos:
 
 </xs:element>
 ```
+!!! tip "Aclaración"
+
+    El elemento **`producto`** es un tipo complejo porque combina **elementos hijos** (`nombre` y `precio`) con un **atributo obligatorio** (`codigo`). Esto permite describir información más completa y estructurada en un documento XML.
 
 ## 8.8 Regla fundamental: complexType
 
@@ -386,6 +389,11 @@ junto con:
 
 </xs:element>
 ```
+!!! info "Aclaración"
+
+    Aunque `precio` contiene un único valor numérico, se ha definido como un tipo complejo porque necesita incorporar el atributo obligatorio `moneda`.
+
+    Los elementos simples no pueden tener atributos. Por ello se utiliza `xs:simpleContent`, que permite ampliar un tipo simple (`xs:decimal`) añadiéndole atributos mediante `xs:extension`.
 
 ### XML válido
 
@@ -517,12 +525,20 @@ Diseña el esquema necesario para:
 
 ??? tip "Solución"
 
-    Debe utilizarse:
-
-    - `xs:complexType`
-    - `xs:simpleContent`
-    - `xs:extension`
-    - `xs:attribute`
+    ```xml
+    <xs:element name="precio">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:decimal">
+                    <xs:attribute
+                        name="moneda"
+                        type="xs:string"
+                        use="required"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    ```
 
 ## Actividad de reflexión
 
