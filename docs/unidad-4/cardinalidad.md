@@ -119,6 +119,13 @@ Permite un número ilimitado de elementos.
     </xs:complexType>
 </xs:element>
 ```
+El elemento `biblioteca` contiene elementos `libro`.
+
+La cardinalidad definida obliga a que exista al menos un libro (`minOccurs="1"`).
+
+Además, permite que aparezcan tantos libros como sea necesario (`maxOccurs="unbounded"`).
+
+Esto significa que una biblioteca puede contener uno o más libros, pero nunca estar vacía.
 
 ## 7.9 Resumen visual
 
