@@ -206,7 +206,9 @@ Añade un nuevo elemento llamado asunto.
 
 ??? tip "Solución"
 
+    ```xml
     <xs:element name="asunto" type="xs:string"/>
+    ```
 
 ### Ejercicio 5 · Comprensión global
 
