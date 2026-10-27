@@ -96,6 +96,9 @@ Ejemplo:
 Ahora ya no necesitamos repetir la definición.
 
 Podemos reutilizarla:
+!!! info "`type`"
+
+    El atributo `type` indica el tipo de dato que utilizará un elemento.
 
 ```xml
 <xs:element
@@ -245,6 +248,11 @@ email
 id_empleado
 departamento
 ```
+!!! info "¿Qué hace `xs:complexContent`?"
+
+    La etiqueta `xs:complexContent` se utiliza cuando queremos ampliar o restringir un **tipo complejo** ya existente.
+
+    En este caso, el tipo base `TipoPersona` contiene otros elementos (`nombre` y `email`), por lo que no podemos utilizar `xs:simpleContent`.
 
 !!! note "Herencia"
 
@@ -370,7 +378,7 @@ C --> G[Reducir posibilidades]
 
 ## Ejercicios propuestos
 
-### Ejercicio 1 · Tipo de colores
+!!! question "Ejercicio 1 · Tipo de colores"
 
 Crea un tipo reutilizable llamado:
 
@@ -404,7 +412,7 @@ azul
     </xs:simpleType>
     ```
 
-### Ejercicio 2 · Tipo de dispositivos
+!!! question "Ejercicio 2 · Tipo de dispositivos"
 
 Crea un tipo reutilizable para:
 
@@ -418,9 +426,31 @@ y utilízalo posteriormente en dos elementos distintos.
 
 ??? tip "Solución"
 
-    Crear un simpleType con nombre y reutilizarlo mediante el atributo `type`.
+    Primero definimos un tipo simple reutilizable llamado `TipoDispositivo`:
 
-### Ejercicio 3 · TipoPersona
+    ```xml
+    <xs:simpleType name="TipoDispositivo">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="movil"/>
+            <xs:enumeration value="tablet"/>
+            <xs:enumeration value="ordenador"/>
+        </xs:restriction>
+    </xs:simpleType>
+    ```
+
+    Después lo utilizamos en varios elementos mediante el atributo `type`:
+
+    ```xml
+    <xs:element
+        name="dispositivo_principal"
+        type="TipoDispositivo"/>
+
+    <xs:element
+        name="dispositivo_secundario"
+        type="TipoDispositivo"/>
+    ```
+
+!!! question "Ejercicio 3 · TipoPersona"
 
 Diseña un tipo complejo llamado:
 
@@ -435,9 +465,25 @@ que contenga:
 
 ??? tip "Solución"
 
-    Utilizar `xs:complexType` con una secuencia de dos elementos.
+    Definimos un tipo complejo reutilizable llamado `TipoPersona` que contiene los elementos `nombre` y `email`:
 
-### Ejercicio 4 · TipoEmpleado
+    ```xml
+    <xs:complexType name="TipoPersona">
+        <xs:sequence>
+            <xs:element
+                name="nombre"
+                type="xs:string"/>
+
+            <xs:element
+                name="email"
+                type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    ```
+
+    Cualquier elemento que utilice `TipoPersona` deberá contener ambos datos en ese orden.
+
+!!! question "Ejercicio 4 · TipoEmpleado"
 
 A partir de:
 
@@ -458,13 +504,38 @@ añadiendo:
 
 ??? tip "Solución"
 
-    Utilizar:
+    Partiendo del tipo `TipoPersona`, creamos un nuevo tipo llamado `TipoEmpleado` mediante extensión:
 
     ```xml
-    <xs:extension>
+    <xs:complexType name="TipoEmpleado">
+         <xs:complexContent>
+             <xs:extension base="TipoPersona">
+
+               <xs:sequence>
+                 <xs:element
+                    name="id_empleado"
+                    type="xs:integer"/>
+
+                 <xs:element
+                    name="departamento"
+                    type="xs:string"/>
+                 </xs:sequence>
+
+             </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
     ```
 
-### Ejercicio 5 · Código postal
+    Un elemento de tipo `TipoEmpleado` contendrá:
+
+    - `nombre`
+    - `email`
+    - `id_empleado`
+    - `departamento`
+
+    porque hereda los datos de `TipoPersona` y añade dos nuevos.
+
+!!! question "Ejercicio 5 · Código postal"
 
 Diseña un tipo reutilizable:
 
@@ -476,12 +547,19 @@ que valide códigos postales españoles.
 
 ??? tip "Solución"
 
-    Utilizar:
+    Creamos un tipo reutilizable denominado `TipoCodigoPostal`:
 
-    - length = 5
-    - pattern = [0-9]{5}
+    ```xml
+    <xs:simpleType name="TipoCodigoPostal">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{5}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    ```
 
-### Ejercicio 6 · XML válido o inválido
+    Este tipo solo admite cadenas formadas por exactamente cinco dígitos
+
+!!! question "Ejercicio 6 · XML válido o inválido"
 
 Suponiendo:
 
@@ -510,7 +588,7 @@ Suponiendo:
     - tablet ✅ válido
     - consola ❌ inválido
 
-### Ejercicio 7 · Diseñando una jerarquía
+!!! question "Ejercicio 7 · Diseñando una jerarquía"
 
 Diseña una estructura donde:
 
@@ -535,7 +613,47 @@ amplíe dicho tipo añadiendo:
 
 ??? tip "Solución"
 
-    Crear TipoVehiculo como tipo base y TipoCoche mediante xs:extension.
+    Primero definimos el tipo base `TipoVehiculo`:
+
+    ```xml
+    <xs:complexType name="TipoVehiculo">
+        <xs:sequence>
+            <xs:element
+                name="marca"
+                type="xs:string"/>
+
+            <xs:element
+                name="modelo"
+                type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    ```
+
+    A continuación creamos `TipoCoche` ampliándolo mediante herencia:
+
+    ```xml
+    <xs:complexType name="TipoCoche">
+        <xs:complexContent>
+            <xs:extension base="TipoVehiculo">
+
+                <xs:sequence>
+                    <xs:element
+                        name="matricula"
+                        type="xs:string"/>
+                </xs:sequence>
+
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    ```
+
+    Un coche contendrá:
+
+    - `marca`
+    - `modelo`
+    - `matricula`
+
+    ya que hereda los elementos definidos en `TipoVehiculo` y añade uno nuevo.
 
 ## Actividad de reflexión
 
