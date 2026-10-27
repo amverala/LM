@@ -427,6 +427,16 @@ base="xs:decimal"
 
 indica que el elemento seguirá siendo un número decimal, pero además tendrá el atributo `moneda`.
 
+!!! tip "Recuerda"
+
+    Siempre que se utilice `xs:extension` debe indicarse mediante el atributo `base` el tipo que se desea ampliar.
+
+    ```xml
+    <xs:extension base="TipoBase">
+    ```
+
+    Sin `base`, XML Schema no sabría cuál es el tipo original sobre el que se añaden nuevos atributos o elementos.
+
 ## 8.10 Resumen visual
 
 ```mermaid
