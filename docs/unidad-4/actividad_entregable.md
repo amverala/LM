@@ -151,30 +151,15 @@
         Debes entregar:
 
         - factura_con_errores.xml corregido.
-        - Documento explicativo.
+        - Documento explicativo (según las normas de entrega de tareas) que incluya:
+            - Qué errores encontraste.
+            - Cómo los identificaste.
+            - Qué cambios realizaste.
+            - Qué herramientas utilizaste
 
-    ## Evidencias a entregar
 
-    Entrega un archivo comprimido que contenga:
 
-    ```text
-    factura_con_errores.xml
-    ```
-
-    completamente corregido.
-
-    Además incluye:
-
-    ### Documento breve
-
-    Explicando:
-
-    - Qué errores encontraste.
-    - Cómo los identificaste.
-    - Qué cambios realizaste.
-    - Qué herramientas utilizaste.
-
-        ## Actividad de ampliación
+    ## Actividad de ampliación
 
     !!! question "Investigación"
 
