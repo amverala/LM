@@ -207,6 +207,113 @@ Esta restricción funciona de manera similar a una clave foránea en bases de da
 
 Porque A99 no existe.
 
+!!! tip "Regla general"
+
+    Las restricciones de identidad (`xs:key`, `xs:unique` y `xs:keyref`) utilizan siempre:
+
+    - `xs:selector`: indica los elementos que se van a analizar.
+    - `xs:field`: indica el valor que actuará como clave o referencia.
+
+    ```xml
+    <xs:key name="ClaveAlumno">
+        <xs:selector xpath="alumno"/>
+        <xs:field xpath="id"/>
+    </xs:key>
+    ```
+
+    Piensa que `selector` responde a la pregunta **«¿sobre qué elementos?»**, mientras que `field` responde a **«¿qué dato de esos elementos?»**.
+
+??? example "Ejemplo completo de `xs:keyref`"
+ 
+Imaginemos una empresa con departamentos y empleados.
+ 
+Cada departamento tiene un identificador único (`id`) y cada empleado indica el departamento al que pertenece mediante `departamento_id`.
+ 
+Queremos asegurarnos de que un empleado solo pueda hacer referencia a departamentos que existan realmente.
+ 
+**XML válido:**
+ 
+```xml
+<empresa>
+ 
+<departamento>
+<id>D01</id>
+<nombre>Informática</nombre>
+</departamento>
+ 
+<departamento>
+<id>D02</id>
+<nombre>Contabilidad</nombre>
+</departamento>
+ 
+<empleado>
+<nombre>Ana</nombre>
+<departamento_id>D01</departamento_id>
+</empleado>
+ 
+</empresa>
+```
+ 
+**Definición de la clave:**
+ 
+```xml
+<xs:key name="ClaveDepartamento">
+<xs:selector xpath="departamento"/>
+<xs:field xpath="id"/>
+</xs:key>
+```
+ 
+Esta clave garantiza que cada `id` de departamento sea único.
+ 
+**Definición de la referencia:**
+ 
+```xml
+<xs:keyref
+name="ReferenciaDepartamento"
+refer="ClaveDepartamento">
+ 
+<xs:selector xpath="empleado"/>
+<xs:field xpath="departamento_id"/>
+ 
+</xs:keyref>
+```
+ 
+El atributo:
+ 
+```xml
+refer="ClaveDepartamento"
+```
+ 
+indica que los valores de `departamento_id` deben existir previamente en la clave `ClaveDepartamento`.
+ 
+**Ejemplo válido ✅**
+ 
+```xml
+<empleado>
+<nombre>Ana</nombre>
+<departamento_id>D01</departamento_id>
+</empleado>
+```
+ 
+`D01` existe como identificador de departamento.
+ 
+**Ejemplo inválido ❌**
+ 
+```xml
+<empleado>
+<nombre>Ana</nombre>
+<departamento_id>D99</departamento_id>
+</empleado>
+```
+ 
+`D99` no existe como identificador de departamento.
+ 
+!!! tip "Relación con las bases de datos"
+ 
+`xs:key` funciona de forma similar a una **clave primaria (PRIMARY KEY)** y `xs:keyref` actúa como una **clave foránea (FOREIGN KEY)**.
+ 
+Gracias a ello, XML Schema puede garantizar la integridad de las referencias entre elementos del documento.
+
 ## 12.6 Relacionando elementos
 
 La idea fundamental es que:
@@ -487,7 +594,7 @@ E --> F[Evita duplicados]
 
 ## Ejercicios propuestos
 
-### Ejercicio 1 · Detectando duplicados
+!!! question "Ejercicio 1 · Detectando duplicados"
 
 Tenemos:
 
@@ -508,7 +615,7 @@ A03
 
 ---
 
-### Ejercicio 2 · Clave obligatoria
+!!! question "Ejercicio 2 · Clave obligatoria"
 
 Diseña una clave para identificar alumnos mediante:
 
@@ -523,15 +630,28 @@ El identificador debe:
 
 ??? tip "Solución"
 
+    Para garantizar que cada alumno tenga un identificador único y obligatorio, utilizamos `xs:key`.
+
     ```xml
-    <xs:key>
+    <xs:key name="ClaveAlumno">
+
+        <xs:selector xpath="alumno"/>
+
+        <xs:field xpath="id"/>
+
+    </xs:key>
     ```
+
+    Esta restricción garantiza que:
+
+    - Cada elemento `alumno` debe contener un valor para `id`.
+    - No puede haber dos alumnos con el mismo `id`.
 
     porque garantiza unicidad y obligatoriedad.
 
 ---
 
-### Ejercicio 3 · XML válido o inválido
+!!! question "Ejercicio 3 · XML válido o inválido"
 
 Analiza:
 
@@ -551,7 +671,7 @@ Analiza:
 
 ---
 
-### Ejercicio 4 · XML inválido
+!!! question "Ejercicio 4 · XML inválido"
 
 Analiza:
 
@@ -569,7 +689,7 @@ Analiza:
 
 ---
 
-### Ejercicio 5 · Relación alumno-matrícula
+!!! question "Ejercicio 5 · Relación alumno-matrícula"
 
 Queremos que:
 
@@ -591,15 +711,27 @@ debe producir un error.
 
 ??? tip "Solución"
 
-    ```xml
-    <xs:keyref>
-    ```
+    Debemos utilizar **`xs:keyref`**.
 
+    `xs:keyref` permite que un valor haga referencia a una clave definida previamente mediante `xs:key`.
+
+    En este caso, el atributo `alumno` de cada matrícula debe coincidir con el identificador de un alumno existente.
+
+    ```xml
+    <xs:keyref
+        name="ReferenciaAlumno"
+        refer="ClaveAlumno">
+
+        <xs:selector xpath="matricula"/>
+        <xs:field xpath="@alumno"/>
+
+    </xs:keyref>
+    ```
     porque crea una referencia hacia una clave definida mediante `xs:key`.
 
 ---
 
-### Ejercicio 6 · Detectando referencias incorrectas
+!!! question "Ejercicio 6 · Detectando referencias incorrectas"
 
 Analiza:
 
@@ -619,7 +751,7 @@ Analiza:
 
 ---
 
-### Ejercicio 7 · Diseñando un sistema de pedidos
+!!! question "Ejercicio 7 · Diseñando un sistema de pedidos"
 
 Diseña una estructura donde:
 
@@ -638,17 +770,59 @@ Indica:
 
 ??? tip "Solución"
 
-    Cliente:
+    Para resolver este problema debemos utilizar una combinación de:
+
+    - `xs:key` para identificar de forma única a cada cliente.
+    - `xs:keyref` para garantizar que cada pedido haga referencia a un cliente existente.
+
+    **1. Clave (`xs:key`)**
+
+    La clave sería el identificador del cliente:
 
     ```xml
-    <xs:key>
+    <cliente>
+        <id>C001</id>
+        <nombre>Ana</nombre>
+    </cliente>
     ```
 
-    Pedido:
+    Definición de la clave:
 
     ```xml
-    <xs:keyref>
+    <xs:key name="ClaveCliente">
+        <xs:selector xpath="cliente"/>
+        <xs:field xpath="id"/>
+    </xs:key>
     ```
+
+    **2. Referencia (`xs:keyref`)**
+
+    Cada pedido almacenará el identificador de un cliente:
+
+    ```xml
+    <pedido>
+        <cliente_id>C001</cliente_id>
+        <importe>120.50</importe>
+    </pedido>
+    ```
+
+    Definición de la referencia:
+
+    ```xml
+    <xs:keyref
+        name="ReferenciaCliente"
+        refer="ClaveCliente">
+
+        <xs:selector xpath="pedido"/>
+        <xs:field xpath="cliente_id"/>
+
+    </xs:keyref>
+    ```
+
+    **3. Mecanismos utilizados**
+
+    - `xs:key`: garantiza que el identificador de cada cliente existe y no se repite.
+    - `xs:keyref`: garantiza que el valor de `cliente_id` en cada pedido corresponde a un cliente existente.
 
     La relación es equivalente a una clave primaria y una clave foránea.
 
