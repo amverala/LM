@@ -324,7 +324,7 @@ C --> E[Aplicaciones]
 
 ## Ejercicios propuestos
 
-### Ejercicio 1 · Documentando un elemento
+!!! question "Ejercicio 1 · Documentando un elemento"
 
 Añade documentación al elemento:
 
@@ -337,18 +337,20 @@ explicando que representa un cliente registrado.
 ??? tip "Solución"
 
     ```xml
-    <xs:annotation>
+    <xs:element name="cliente">
+        <xs:annotation>
 
-        <xs:documentation>
+          <xs:documentation>
 
-            Información de un cliente registrado.
+               Información de un cliente registrado.
 
-        </xs:documentation>
+          </xs:documentation>
 
-    </xs:annotation>
+        </xs:annotation>
+    </xs:element>
     ```
 
-### Ejercicio 2 · Identificando etiquetas
+!!! question "Ejercicio 2 · Identificando etiquetas"
 
 Indica cuál de estas etiquetas está orientada a personas:
 
@@ -359,7 +361,7 @@ Indica cuál de estas etiquetas está orientada a personas:
 
     xs:documentation.
 
-### Ejercicio 3 · Identificando etiquetas
+!!! question "Ejercicio 3 · Identificando etiquetas"
 
 Indica cuál está orientada a aplicaciones:
 
@@ -370,7 +372,7 @@ Indica cuál está orientada a aplicaciones:
 
     xs:appinfo.
 
-### Ejercicio 4 · Comentario o documentación
+!!! question "Ejercicio 4 · Comentario o documentación"
 
 ¿Qué opción es más adecuada para describir formalmente un elemento?
 
@@ -387,5 +389,16 @@ o
 ??? tip "Solución"
 
     xs:documentation.
-    
-    Forma parte
+
+!!! tip "Al terminar este apartado"
+
+    Deberías ser capaz de:
+
+    - Comprender la utilidad de documentar un esquema XML.
+    - Utilizar `xs:annotation` para añadir información descriptiva.
+    - Diferenciar entre `xs:documentation` y `xs:appinfo`.
+    - Documentar elementos, atributos y tipos simples o complejos.
+    - Mejorar la legibilidad y mantenibilidad de un esquema XML mediante comentarios estructurados.
+    - Identificar cuándo una información está orientada a desarrolladores (`xs:documentation`) o a herramientas y aplicaciones (`xs:appinfo`).
+
+    Una buena documentación facilita la comprensión, el mantenimiento y la reutilización de los esquemas XML por parte de otros desarrolladores.
