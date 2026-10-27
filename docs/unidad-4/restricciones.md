@@ -483,6 +483,14 @@ Indica el número máximo de decimales permitidos.
 
 </xs:element>
 ```
+!!! info "¿Qué hace este código?"
+
+    Este esquema define un elemento llamado `producto` cuyo contenido debe ser una cadena de texto (`xs:string`) que cumpla una serie de restricciones:
+
+    - Debe tener una longitud mínima de **5 caracteres**.
+    - Debe tener una longitud máxima de **20 caracteres**.
+    - Solo puede contener **letras mayúsculas, minúsculas y números**.
+    - No se permiten espacios, símbolos ni caracteres especiales.
 
 ## 9.9 Resumen visual
 
@@ -506,7 +514,8 @@ A --> L[fractionDigits]
 
 ## Ejercicios propuestos
 
-### Ejercicio 1 · Validando códigos postales
+
+!!! question "Ejercicio 1 · Validando códigos postales"
 
 Una empresa almacena códigos postales españoles.
 
@@ -543,7 +552,7 @@ Después indica si los siguientes valores serían válidos:
     - 1234 ❌ inválido
     - 123456 ❌ inválido
 
-### Ejercicio 2 · Clasificación PEGI
+!!! question "Ejercicio 2 · Clasificación PEGI"
 
 Una tienda de videojuegos solo admite las siguientes clasificaciones:
 
@@ -589,7 +598,7 @@ Después indica si los siguientes valores serían válidos:
     - 15 ❌ inválido
     - 18 ✅ válido
 
-### Ejercicio 3 · Nota de examen
+!!! question "Ejercicio 3 · Nota de examen"
 
 Diseña una restricción para una nota entre 0 y 10.
 
@@ -618,7 +627,7 @@ Comprueba:
     - 12 ❌
     - -1 ❌
 
-### Ejercicio 4 · IVA
+!!! question "Ejercicio 4 · IVA"
 
 Diseña una restricción para un porcentaje de IVA entre 0 y 100.
 
@@ -647,7 +656,7 @@ Comprueba:
     - 100 ✅
     - 150 ❌
 
-### Ejercicio 5 · Descuento comercial
+!!! question "Ejercicio 5 · Descuento comercial"
 
 Una tienda quiere almacenar descuentos.
 
@@ -683,7 +692,7 @@ Analiza los siguientes valores:
     - 99 ✅
     - 100 ❌
 
-### Ejercicio 6 · Contraseña segura
+!!! question "Ejercicio 6 · Contraseña segura"
 
 Crea una restricción que obligue a que:
 
@@ -714,7 +723,7 @@ mi-clave
     - mipassword2026 ✅
     - mi-clave ❌
 
-### Ejercicio 7 · Diseñando una matrícula
+!!! question "Ejercicio 7 · Diseñando una matrícula"
 
 Queremos validar una matrícula simplificada:
 
