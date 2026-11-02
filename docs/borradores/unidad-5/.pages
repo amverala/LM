@@ -1,0 +1,20 @@
+
+nav:
+  - index.md
+  - 1. Introducción a XPath y XSLT: introduccion.md
+  - 2. Árbol XML y rutas XPath: arbol-rutas.md
+  - 3. Ejes y selección de nodos: ejes-nodos.md
+  - 4. Predicados, funciones y operadores: funciones-predicados.md
+  - 5. Consultas XPath: consultas-xpath.md
+  - 6. HTML básico: html.md
+  - 7. Fundamentos de XSLT: xslt.md
+  - 8. Templates y procesamiento: templates-procesamiento.md
+  - 9. Condicionales y ordenación: condicionales-sort.md 
+  - 10. Transformación XML-HTML: xml-html.md
+  - 11. Actividades voluntarias:
+    - 11.1 Xpath: actividades-voluntarias-xpath.md
+    - 11.2 Xslt: actividades-voluntarias-xslt.md
+  - 12. Actividades evaluables:
+    - 12.1 Xpath: actividades-evaluables-xpath.md
+    - 12.2 Xslt: actividades-evaluables-xslt.md
+
