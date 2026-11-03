@@ -54,9 +54,9 @@ Utilizaremos la siguiente filmoteca para todos los ejemplos:
 
 ---
 
-# Predicados
+## Predicados
 
-## ¿Qué es un predicado?
+### ¿Qué es un predicado?
 
 Los predicados son filtros que se escriben entre corchetes:
 
@@ -188,9 +188,9 @@ La película debe cumplir ambas condiciones para ser seleccionada.
 
 ---
 
-# Funciones XPath
+## Funciones XPath
 
-## ¿Qué son las funciones?
+### ¿Qué son las funciones?
 
 XPath incorpora numerosas funciones predefinidas que permiten:
 
@@ -324,7 +324,7 @@ Resultado:
 
 ---
 
-# Operadores de comparación
+## Operadores de comparación
 
 Los operadores de comparación permiten evaluar condiciones.
 
@@ -363,11 +363,11 @@ Resultado:
 
 ---
 
-# Operadores lógicos
+## Operadores lógicos
 
 Permiten combinar varias condiciones.
 
-## Operador and
+### Operador and
 
 Todas las condiciones deben cumplirse.
 
@@ -377,7 +377,7 @@ Todas las condiciones deben cumplirse.
 
 ---
 
-## Operador or
+### Operador or
 
 Basta con que se cumpla una condición.
 
@@ -387,7 +387,7 @@ Basta con que se cumpla una condición.
 
 ---
 
-## Operador not()
+### Operador not()
 
 Invierte una condición.
 
@@ -403,9 +403,9 @@ Resultado:
 
 ---
 
-# Operador de unión
+## Operador de unión
 
-## Operador |
+### Operador |
 
 Permite unir varios conjuntos de nodos.
 
@@ -437,7 +437,7 @@ Resultado:
 
 ---
 
-# Resumen de funciones y operadores
+## Resumen de funciones y operadores
 
 | Elemento | Descripción | Ejemplo |
 |-----------|-------------|----------|
@@ -454,7 +454,7 @@ Resultado:
 
 ---
 
-# Actividades prácticas
+## Actividades prácticas
 
 ??? question "Actividad 1. Filtrando por contenido"
 

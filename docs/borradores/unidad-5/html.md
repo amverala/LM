@@ -138,11 +138,11 @@ HTML dispone de seis niveles:
 
 Resultado:
 
-# Encabezado principal
+## Encabezado principal
 
 ## Encabezado secundario
 
-### Encabezado de tercer nivel
+## Encabezado de tercer nivel
 
 ---
 
@@ -355,7 +355,7 @@ El resultado final será una página web HTML.
 
 ---
 
-# Actividades prácticas
+## Actividades prácticas
 
 ??? question "Actividad 1. Identificando elementos HTML"
 

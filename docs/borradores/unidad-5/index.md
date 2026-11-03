@@ -18,24 +18,24 @@ En esta unidad aprenderás a consultar documentos XML utilizando expresiones XPa
 **Duración estimada: 12 horas**
 
 [Abrir la unidad](introduccion.md){ .md-button .md-button--primary }
-[Ir a la actividad entregable](actividad_entregable.md){ .md-button }
+[Ir a las actividades evaluables](actividades-evaluables-xpath.md){ .md-button }
 
 ## Recorrido del tema
 
 | Apartado | Qué aprenderás |
 |-----------|-----------|
 | **[Introducción a XPath y XSLT](introduccion.md)** | Comprender el papel de XPath y XSLT dentro del ecosistema XML y su relación con las unidades anteriores. |
-| **arbol-rutas.md** | Interpretar la estructura jerárquica de un documento XML y construir rutas absolutas y relativas. |
-| **ejes-nodos.md** | Navegar por el árbol XML mediante ejes y seleccionar elementos, atributos y textos. |
-| **funciones-predicados.md** | Filtrar información y construir consultas XPath más potentes. |
-| **xpath-practico.md** | Resolver casos prácticos habituales utilizando expresiones XPath. |
-| **html.md** | Repasar la estructura HTML necesaria para generar documentos de salida. |
-| **xslt.md** | Comprender el proceso de transformación XML → HTML y los elementos principales de una hoja XSLT. |
-| **templates.md** | Utilizar `template`, `value-of`, `for-each` y `apply-templates`. |
-| **condicionales-sort.md** | Aplicar lógica condicional y ordenar información durante una transformación. |
-| **xml-html.md** | Crear transformaciones completas y generar páginas web dinámicas a partir de XML. |
-| **[Ejercicios voluntarios](ejercicios_voluntarios.md)** | Consolidar los contenidos mediante actividades prácticas. |
-| **[Actividad entregable](actividad_entregable.md)** | Diseñar una solución completa basada en XPath y XSLT. |
+| **[Árbol XML y rutas Xpath](arbol-rutas.md)** | Interpretar la estructura jerárquica de un documento XML y construir rutas absolutas y relativas. |
+| **[Ejes y selección de nodos](ejes-nodos.md)** | Navegar por el árbol XML mediante ejes y seleccionar elementos, atributos y textos. |
+| **[Predicados, funcionas y operadores](funciones-predicados.md)** | Filtrar información y construir consultas XPath más potentes. |
+| **[Consultas Xpath](consultas-xpath.md)** | Resolver casos prácticos habituales utilizando expresiones XPath. |
+| **[HTML básico](html.md)** | Repasar la estructura HTML necesaria para generar documentos de salida. |
+| **[Fundamentos de XSLT](xslt.md)** | Comprender el proceso de transformación XML → HTML y los elementos principales de una hoja XSLT. |
+| **[Templates y procesamiento](templates-procesamiento.md)** | Utilizar `template`, `value-of`, `for-each` y `apply-templates`. |
+| **[Condicionales y ordenación](condicionales-sort.md)** | Aplicar lógica condicional y ordenar información durante una transformación. |
+| **[Transformación XML-HTML](xml-html.md)** | Crear transformaciones completas y generar páginas web dinámicas a partir de XML. |
+| **[Actividades voluntarias](actividades-voluntarias-xpath.md)** | Consolidar los contenidos mediante actividades prácticas. |
+| **[Actividades evaluables](actividades-evaluables-xpath.md)** | Diseñar una solución completa basada en XPath y XSLT. |
 
 ## Secuencia recomendada
 

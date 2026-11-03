@@ -17,11 +17,9 @@ Durante su resolución será necesario aplicar:
 
 ## Documento XML de referencia
 
-Utiliza el documento XML del horario trabajado durante la unidad.
+Utiliza el documento XML de las actividades voluntarias XSLT
 
 ---
-
-# Actividad evaluable 1
 
 ??? question "Actividad 1. Generar una tabla HTML"
 
@@ -57,8 +55,6 @@ Utiliza el documento XML del horario trabajado durante la unidad.
 
 ---
 
-# Actividad evaluable 2
-
 ??? question "Actividad 2. Ordenación del horario"
 
     Partiendo de la actividad anterior, modifica la transformación para que:
@@ -86,8 +82,6 @@ Utiliza el documento XML del horario trabajado durante la unidad.
     |------|------------|------------|------------|-----------|
 
 ---
-
-# Actividad evaluable 3
 
 ??? question "Actividad 3. Agenda completa"
 
@@ -157,7 +151,7 @@ Utiliza el documento XML del horario trabajado durante la unidad.
 
 ---
 
-# Entrega
+## Entrega
 
 Para cada actividad se deberá entregar:
 
@@ -169,7 +163,7 @@ Para cada actividad se deberá entregar:
 
 ---
 
-# Criterios generales de evaluación
+## Criterios generales de evaluación
 
 Se valorará especialmente:
 
@@ -185,7 +179,7 @@ Se valorará especialmente:
 
 ---
 
-# Objetivos evaluados
+## Objetivos evaluados
 
 !!! success "Competencias"
 

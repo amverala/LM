@@ -77,9 +77,9 @@ podemos acceder directamente a sus hijos:
 
 ---
 
-# Ejes XPath
+## Ejes XPath
 
-## El eje child::
+### El eje child::
 
 El eje `child::` selecciona los hijos directos del nodo actual.
 
@@ -380,7 +380,7 @@ style C fill:#a5d6a7
 
 ---
 
-# Nodos de comprobación
+## Nodos de comprobación
 
 Una vez indicado el eje de búsqueda, XPath necesita saber qué tipo de nodo debe localizar.
 
@@ -517,7 +517,7 @@ Resultado:
 
 ---
 
-# Actividades prácticas
+## Actividades prácticas
 
 ??? question "Actividad 1. Identificando relaciones"
 

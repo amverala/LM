@@ -18,7 +18,7 @@ Ahora vamos a integrar todos estos conocimientos en una transformación completa
 
 ---
 
-# El proceso completo de transformación
+## El proceso completo de transformación
 
 La generación de páginas web mediante XSLT sigue siempre el mismo flujo:
 
@@ -47,7 +47,7 @@ En este proceso:
 
 ---
 
-# Documento XML original
+## Documento XML original
 
 El siguiente documento contiene información sobre películas.
 
@@ -115,7 +115,7 @@ que deberá utilizarse para transformar el documento XML.
 
 ---
 
-# Resultado que queremos obtener
+## Resultado que queremos obtener
 
 Queremos generar una página HTML similar a la siguiente:
 
@@ -135,7 +135,7 @@ Además:
 
 ---
 
-# Hoja XSLT completa
+## Hoja XSLT completa
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -238,9 +238,9 @@ Número total de películas:
 
 ---
 
-# Analizando la transformación
+## Analizando la transformación
 
-## Paso 1. Plantilla principal
+### Paso 1. Plantilla principal
 
 ```xml
 <xsl:template match="/">
@@ -250,7 +250,7 @@ La transformación comienza en la raíz del documento XML.
 
 ---
 
-## Paso 2. Crear la página HTML
+### Paso 2. Crear la página HTML
 
 ```html
 <html>
@@ -268,7 +268,7 @@ Estas etiquetas se copiarán directamente al documento HTML generado.
 
 ---
 
-## Paso 3. Recorrer todas las películas
+### Paso 3. Recorrer todas las películas
 
 ```xml
 <xsl:for-each
@@ -279,7 +279,7 @@ Permite procesar cada película individualmente.
 
 ---
 
-## Paso 4. Ordenar el resultado
+### Paso 4. Ordenar el resultado
 
 ```xml
 <xsl:sort select="titulo"/>
@@ -297,7 +297,7 @@ The Apartment
 
 ---
 
-## Paso 5. Mostrar la información
+### Paso 5. Mostrar la información
 
 ```xml
 <xsl:value-of select="titulo"/>
@@ -315,7 +315,7 @@ Extraen los datos almacenados en el XML.
 
 ---
 
-## Paso 6. Aplicar condiciones
+### Paso 6. Aplicar condiciones
 
 ```xml
 <xsl:choose>
@@ -325,7 +325,7 @@ Permite distinguir entre películas destacadas y películas normales.
 
 ---
 
-## Paso 7. Contar elementos
+### Paso 7. Contar elementos
 
 ```xpath
 count(filmoteca/pelicula)
@@ -352,7 +352,7 @@ Cuenta todas las películas presentes en el documento.
 
 ---
 
-# Errores frecuentes
+## Errores frecuentes
 
 !!! danger "Olvidar xsl:value-of"
 
@@ -409,7 +409,7 @@ Cuenta todas las películas presentes en el documento.
 
 ---
 
-# Práctica guiada
+## Práctica guiada
 
 ??? question "Práctica 1. Catálogo de videojuegos"
 
@@ -448,7 +448,7 @@ Cuenta todas las películas presentes en el documento.
 
 ---
 
-# Proyecto final de la unidad
+## Proyecto final de la unidad
 
 ??? question "Proyecto: Biblioteca digital"
 
@@ -482,7 +482,7 @@ Cuenta todas las películas presentes en el documento.
 
 ---
 
-# Resumen
+## Resumen
 
 !!! success "Ideas clave"
 

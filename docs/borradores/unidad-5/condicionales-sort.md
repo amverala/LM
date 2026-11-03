@@ -64,9 +64,9 @@ Utilizaremos el mismo catálogo de CDs empleado en el tema:
 
 ---
 
-# xsl:if
+## xsl:if
 
-## ¿Para qué sirve?
+### ¿Para qué sirve?
 
 La instrucción `xsl:if` permite ejecutar un bloque de código únicamente cuando se cumple una condición.
 
@@ -74,7 +74,7 @@ Su comportamiento es similar al de una sentencia `if` en un lenguaje de programa
 
 ---
 
-## Sintaxis
+### Sintaxis
 
 ```xml
 <xsl:if test="condicion">
@@ -88,7 +88,7 @@ La condición se expresa mediante XPath.
 
 ---
 
-## Ejemplo básico
+### Ejemplo básico
 
 Mostrar únicamente los CDs cuyo precio sea superior a 10 euros.
 
@@ -110,7 +110,7 @@ Mostrar únicamente los CDs cuyo precio sea superior a 10 euros.
 
 ---
 
-## Resultado generado
+### Resultado generado
 
 ```html
 <p>Empire Burlesque</p>
@@ -120,7 +120,7 @@ Solo aparece ese CD porque es el único cuyo precio supera 10 €.
 
 ---
 
-## Funcionamiento visual
+### Funcionamiento visual
 
 ```mermaid
 flowchart TD
@@ -158,9 +158,9 @@ Mostrar el precio solamente si supera los 10 euros.
 
 ---
 
-# xsl:choose
+## xsl:choose
 
-## ¿Para qué sirve?
+### ¿Para qué sirve?
 
 `xsl:choose` permite evaluar varias condiciones diferentes.
 
@@ -176,7 +176,7 @@ de un lenguaje de programación.
 
 ---
 
-## Elementos utilizados
+### Elementos utilizados
 
 | Elemento | Función |
 |-----------|----------|
@@ -186,7 +186,7 @@ de un lenguaje de programación.
 
 ---
 
-## Sintaxis
+### Sintaxis
 
 ```xml
 <xsl:choose>
@@ -208,7 +208,7 @@ de un lenguaje de programación.
 
 ---
 
-## Ejemplo
+### Ejemplo
 
 ```xml
 <xsl:choose>
@@ -230,7 +230,7 @@ de un lenguaje de programación.
 
 ---
 
-## Resultado
+### Resultado
 
 Para un CD con:
 
@@ -258,7 +258,7 @@ Económico
 
 ---
 
-## Ejemplo completo del catálogo
+### Ejemplo completo del catálogo
 
 ```xml
 <xsl:for-each select="catalog/cd">
@@ -302,7 +302,7 @@ Greatest Hits - Económico
 
 ---
 
-## Funcionamiento visual
+### Funcionamiento visual
 
 ```mermaid
 flowchart TD
@@ -324,7 +324,7 @@ B -->|No| D
 
 ---
 
-## Diferencias entre xsl:if y xsl:choose
+### Diferencias entre xsl:if y xsl:choose
 
 | xsl:if | xsl:choose |
 |----------|-----------|
@@ -372,9 +372,9 @@ Siempre genera una respuesta.
 
 ---
 
-# xsl:sort
+## xsl:sort
 
-## ¿Para qué sirve?
+### ¿Para qué sirve?
 
 Permite ordenar los datos antes de mostrarlos.
 
@@ -386,7 +386,7 @@ Normalmente se utiliza dentro de:
 
 ---
 
-## Sintaxis
+### Sintaxis
 
 ```xml
 <xsl:sort select="campo"/>
@@ -394,7 +394,7 @@ Normalmente se utiliza dentro de:
 
 ---
 
-## Ordenar por título
+### Ordenar por título
 
 ```xml
 <xsl:for-each select="catalog/cd">
@@ -412,7 +412,7 @@ Normalmente se utiliza dentro de:
 
 ---
 
-## Resultado
+### Resultado
 
 ```text
 Empire Burlesque
@@ -426,7 +426,7 @@ Los títulos aparecen ordenados alfabéticamente.
 
 ---
 
-## Ordenar por año
+### Ordenar por año
 
 ```xml
 <xsl:sort select="year"/>
@@ -442,7 +442,7 @@ Resultado:
 
 ---
 
-## Orden descendente
+### Orden descendente
 
 Podemos indicar explícitamente el orden.
 
@@ -454,7 +454,7 @@ Podemos indicar explícitamente el orden.
 
 ---
 
-## Ejemplo
+### Ejemplo
 
 ```xml
 <xsl:for-each select="catalog/cd">
@@ -488,7 +488,7 @@ Greatest Hits - 9.90
 
 ---
 
-## Funcionamiento visual
+### Funcionamiento visual
 
 ```mermaid
 flowchart TD
@@ -506,7 +506,7 @@ B --> C
 
 ---
 
-# Combinando condiciones y ordenación
+## Combinando condiciones y ordenación
 
 Las instrucciones pueden utilizarse conjuntamente.
 
@@ -538,7 +538,7 @@ Proceso:
 
 ---
 
-# Resumen de instrucciones
+## Resumen de instrucciones
 
 | Elemento | Función |
 |-----------|----------|
@@ -550,7 +550,7 @@ Proceso:
 
 ---
 
-# Actividades prácticas
+## Actividades prácticas
 
 ??? question "Actividad 1. Utilizando xsl:if"
 
@@ -715,7 +715,7 @@ Proceso:
         ```
 
 ---
-# Práctica guiada XML → XSLT → HTML
+## Práctica guiada XML → XSLT → HTML
 
 ??? question "Práctica integrada: Catálogo de CDs"
 
@@ -1028,7 +1028,7 @@ Proceso:
         ✅ Generación de tablas
 ---
 
-# Resumen
+## Resumen
 
 !!! success "Ideas clave"
 

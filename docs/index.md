@@ -51,6 +51,17 @@ En este sitio encontrarás apuntes, actividades, ejemplos y recursos para aprend
 
     Próximamente
 
+   <!-- [Abrir unidad](unidad-5/){ .md-button }
+
+<!--
+-   **Unidad 6 · HTML**
+
+    ---
+
+    Aprende a crear páginas web utilizando HTML5, la base de todos los sitios web modernos. Descubrirás cómo estructurar correctamente la información mediante etiquetas semánticas, insertar imágenes, enlaces, tablas y formularios, y construir documentos accesibles y preparados para trabajar posteriormente con CSS y JavaScript.
+
+    Próximamente -->
+
 </div>
 
 ---
@@ -58,7 +69,7 @@ En este sitio encontrarás apuntes, actividades, ejemplos y recursos para aprend
 ## Secuencia de aprendizaje
 
 !!! note "Itinerario del módulo"
-    Lenguajes de marcas → XML → DTD → XSD → XPath y XSLT
+    Lenguajes de marcas → XML → Validación con DTD → Validación con XSD → Consulta con XPath → Transformación con XSLT
 
 ---
 
@@ -84,7 +95,10 @@ En este sitio encontrarás apuntes, actividades, ejemplos y recursos para aprend
 | Unidad 2 · XML y documentos bien formados | ✅ Disponible |
 | Unidad 3 · Validación XML y DTD | ✅ Disponible |
 | Unidad 4 · Documentos XML y XSD | ✅ Disponible |
-| Unidad 5 · XPath y XSLT | ⏳ Próximamente |
+| Unidad 5 · XPath y XSLT |  ⏳ Próximamente|
+<!--| Unidad 5 · XPath y XSLT |  ✅ Disponible |
+<!--| Unidad 6 ·  | ⏳ Próximamente |-->
 
 !!! info "Próxima publicación"
-    La Unidad 5 dedicada a XPath y XSLT se publicará próximamente.
+    La Unidad 5 dedicada a XPath y XSLT se publicará próximamente
+<!--    La Unidad 6 dedicada a HTML se publicará próximamente.-->

@@ -1,5 +1,96 @@
 # Actividades voluntarias XPath
 
+
+## Documento XML de referencia
+
+Todas las actividades de este documento se realizan sobre el siguiente XML:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<oferta>
+    <vehiculo>
+        <marca>Ford</marca>
+        <modelo color="blanco">Focus RS 2017</modelo>
+        <motor combustible="gasolina">duratorc 14</motor>
+        <matricula>1234AAA</matricula>
+        <kilometros>12500</kilometros>
+        <precio_inicial>El precio inicial es de 12500 Euros</precio_inicial>
+        <precio_oferta>Precio oferta 10000 Euros</precio_oferta>
+        <extras>
+            <extra valor="250">pintura metalizada</extra>
+            <extra valor="300">llantas</extra>
+            <extra valor="500">climatizador</extra>
+        </extras>
+        <foto imagen="fordblanco"/>
+        <foto imagen="fordblanco2"/>
+        <foto imagen="fordblanco3"/>
+        <foto imagen="fordblanco4"/>
+    </vehiculo>
+
+    <vehiculo>
+        <marca>MERCEDES-BENZ</marca>
+        <modelo color="champagne">Clase CLA</modelo>
+        <motor>CLA 200 d, 136cv</motor>
+        <matricula>6565GTF</matricula>
+        <kilometros>3500</kilometros>
+        <precio_inicial>El precio inicial es de 22500 Euros</precio_inicial>
+        <precio_oferta>Precio oferta 20000 Euros</precio_oferta>
+        <extras>
+            <extra valor="150">Navegador Garmin MAP PILOT</extra>
+            <extra valor="350">Techo corredizo panoramico</extra>
+            <extra valor="500">climatizador</extra>
+        </extras>
+        <foto imagen="mercedes"/>
+        <foto imagen="mercedes2"/>
+    </vehiculo>
+
+    <vehiculo>
+        <marca>Audi</marca>
+        <modelo color="blanco">A5 S line coupe</modelo>
+        <motor combustible="gasolina">2.0 TDI 190CV</motor>
+        <matricula>1991KDB</matricula>
+        <kilometros>100</kilometros>
+        <precio_inicial>El precio inicial es de 36500 Euros</precio_inicial>
+        <precio_oferta>Precio oferta 35000 Euros</precio_oferta>
+        <extras>
+            <extra valor="170">Camara de marcha atras</extra>
+            <extra valor="180">Tapiceria en cuero Milano</extra>
+        </extras>
+        <foto imagen="audiA5"/>
+        <foto imagen="audiA52"/>
+    </vehiculo>
+
+    <vehiculo>
+        <marca>Opel</marca>
+        <modelo color="gris">Astra</modelo>
+        <motor combustible="diesel">Turbo 2.0</motor>
+        <matricula>1235AAA</matricula>
+        <kilometros>125000</kilometros>
+        <precio_inicial>El precio inicial es de 10000 Euros</precio_inicial>
+        <precio_oferta>Precio oferta 9000 Euros</precio_oferta>
+        <extras>
+            <extra valor="250">pintura metalizada</extra>
+            <extra valor="200">spoiler trasero</extra>
+            <extra valor="500">climatizador</extra>
+        </extras>
+        <foto imagen="opel"/>
+        <foto/>
+    </vehiculo>
+
+    <vehiculo>
+        <marca>Ford</marca>
+        <modelo color="gris">Fiesta</modelo>
+        <motor combustible="diesel">Turbo 1.5</motor>
+        <matricula>1200BAA</matricula>
+        <kilometros>180000</kilometros>
+        <precio_inicial>El precio inicial es de 5000 Euros</precio_inicial>
+        <precio_oferta>Precio oferta 4000 Euros</precio_oferta>
+        <foto imagen="opel"/>
+        <foto/>
+    </vehiculo>
+</oferta>
+```
+
 ## Bloque 1. Consultas básicas XPath
 
 ??? question "Actividad 1. Obtener las marcas de los vehículos"
@@ -209,7 +300,7 @@
 
     Si has resuelto correctamente las 10 actividades, ya dominas las consultas XPath más habituales.
 
-# Bloque 2. Selección y filtrado XPath
+## Bloque 2. Selección y filtrado XPath
 
 ??? question "Actividad 11. Obtener los extras de los vehículos a gasolina que tengan el extra 'climatizador'"
 
@@ -424,7 +515,7 @@
 
     Si has resuelto correctamente estas actividades, ya manejas la mayoría de los filtros XPath utilizados en ejercicios y exámenes.
 
-# Bloque 3. Consultas XPath avanzadas
+## Bloque 3. Consultas XPath avanzadas
 
 ??? question "Actividad 21. Obtener los vehículos que tengan una foto sin el atributo imagen"
 

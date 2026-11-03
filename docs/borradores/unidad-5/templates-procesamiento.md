@@ -76,7 +76,7 @@ Utilizaremos durante todo el tema el siguiente catálogo de CDs:
 
 ---
 
-# xsl:template
+## xsl:template
 
 ## ¿Qué es una plantilla?
 
@@ -148,9 +148,9 @@ B --> C[Generación HTML]
 
 ---
 
-# xsl:value-of
+## xsl:value-of
 
-## ¿Para qué sirve?
+### ¿Para qué sirve?
 
 Permite extraer el valor de un elemento XML y copiarlo en el documento generado.
 
@@ -158,7 +158,7 @@ Es probablemente la instrucción más utilizada en XSLT.
 
 ---
 
-## Sintaxis
+### Sintaxis
 
 ```xml
 <xsl:value-of select="expresionXPath"/>
@@ -166,7 +166,7 @@ Es probablemente la instrucción más utilizada en XSLT.
 
 ---
 
-## Ejemplo básico
+### Ejemplo básico
 
 ```xml
 <xsl:value-of select="catalog/cd/title"/>
@@ -180,7 +180,7 @@ Empire Burlesque
 
 ---
 
-## Ejemplo completo
+### Ejemplo completo
 
 ```xml
 <xsl:template match="/">
@@ -214,7 +214,7 @@ Resultado:
 
 ---
 
-## Cómo funciona
+### Cómo funciona
 
 ```mermaid
 flowchart LR
@@ -233,9 +233,9 @@ C --> D
 
 ---
 
-# xsl:for-each
+## xsl:for-each
 
-## ¿Para qué sirve?
+### ¿Para qué sirve?
 
 Permite recorrer una colección de elementos XML.
 
@@ -243,7 +243,7 @@ Equivale a un bucle que se ejecuta una vez por cada elemento seleccionado.
 
 ---
 
-## Sintaxis
+### Sintaxis
 
 ```xml
 <xsl:for-each select="expresionXPath">
@@ -253,7 +253,7 @@ Equivale a un bucle que se ejecuta una vez por cada elemento seleccionado.
 
 ---
 
-## Ejemplo básico
+### Ejemplo básico
 
 ```xml
 <xsl:for-each select="catalog/cd">
@@ -269,7 +269,7 @@ Equivale a un bucle que se ejecuta una vez por cada elemento seleccionado.
 
 ---
 
-## Resultado
+### Resultado
 
 ```html
 <p>Empire Burlesque</p>
@@ -281,7 +281,7 @@ Equivale a un bucle que se ejecuta una vez por cada elemento seleccionado.
 
 ---
 
-## Ejemplo completo con tabla
+### Ejemplo completo con tabla
 
 ```xml
 <xsl:for-each select="catalog/cd">
@@ -331,9 +331,9 @@ E --> F[Generar HTML]
 
 ---
 
-# xsl:apply-templates
+## xsl:apply-templates
 
-## ¿Para qué sirve?
+### ¿Para qué sirve?
 
 Permite delegar el procesamiento en otras plantillas.
 
@@ -341,7 +341,7 @@ En lugar de escribir todo el código dentro de un bucle, el procesador busca aut
 
 ---
 
-## Plantilla principal
+### Plantilla principal
 
 ```xml
 <xsl:template match="/">
@@ -363,7 +363,7 @@ En lugar de escribir todo el código dentro de un bucle, el procesador busca aut
 
 ---
 
-## Plantilla para cada CD
+### Plantilla para cada CD
 
 ```xml
 <xsl:template match="cd">
@@ -381,7 +381,7 @@ En lugar de escribir todo el código dentro de un bucle, el procesador busca aut
 
 ---
 
-## Plantilla para títulos
+### Plantilla para títulos
 
 ```xml
 <xsl:template match="title">
@@ -399,7 +399,7 @@ En lugar de escribir todo el código dentro de un bucle, el procesador busca aut
 
 ---
 
-## Plantilla para artistas
+### Plantilla para artistas
 
 ```xml
 <xsl:template match="artist">
@@ -417,7 +417,7 @@ En lugar de escribir todo el código dentro de un bucle, el procesador busca aut
 
 ---
 
-## Flujo de ejecución
+### Flujo de ejecución
 
 ```mermaid
 flowchart TD
@@ -439,7 +439,7 @@ E --> F
 
 ---
 
-## Diferencia entre for-each y apply-templates
+### Diferencia entre for-each y apply-templates
 
 | xsl:for-each | xsl:apply-templates |
 |--------------|---------------------|
@@ -450,9 +450,9 @@ E --> F
 
 ---
 
-# Comparación práctica
+## Comparación práctica
 
-## Con for-each
+### Con for-each
 
 ```xml
 <xsl:for-each select="catalog/cd">
@@ -468,7 +468,7 @@ E --> F
 
 ---
 
-## Con apply-templates
+### Con apply-templates
 
 ```xml
 <xsl:apply-templates select="cd"/>
@@ -492,7 +492,7 @@ Ambos producen el mismo resultado.
 
 ---
 
-# Resumen de instrucciones
+## Resumen de instrucciones
 
 | Instrucción | Función |
 |-------------|----------|
@@ -503,7 +503,7 @@ Ambos producen el mismo resultado.
 
 ---
 
-# Actividades prácticas
+## Actividades prácticas
 
 ??? question "Actividad 1. Identificando instrucciones"
 
@@ -615,7 +615,7 @@ Ambos producen el mismo resultado.
 
 ---
 
-# Resumen
+## Resumen
 
 !!! success "Ideas clave"
 

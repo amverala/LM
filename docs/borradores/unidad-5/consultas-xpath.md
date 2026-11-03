@@ -73,9 +73,9 @@ Utilizaremos la siguiente filmoteca como referencia:
 
 ---
 
-# Consultas básicas
+## Consultas básicas
 
-## Obtener todos los títulos
+### Obtener todos los títulos
 
 ```xpath
 //titulo
@@ -90,7 +90,7 @@ The Apartment
 
 ---
 
-## Obtener todos los directores
+### Obtener todos los directores
 
 ```xpath
 //director
@@ -105,7 +105,7 @@ Billy Wilder
 
 ---
 
-## Obtener todos los guionistas
+### Obtener todos los guionistas
 
 ```xpath
 //guionista
@@ -121,7 +121,7 @@ Billy Wilder
 
 ---
 
-## Obtener todos los intérpretes
+### Obtener todos los intérpretes
 
 ```xpath
 //interprete
@@ -136,7 +136,7 @@ Ingrid Bergman
 
 ---
 
-## Obtener todos los atributos estreno
+### Obtener todos los atributos estreno
 
 ```xpath
 //pelicula/@estreno
@@ -151,9 +151,9 @@ Resultado:
 
 ---
 
-# Consultas con filtros
+## Consultas con filtros
 
-## Buscar una película por título
+### Buscar una película por título
 
 ```xpath
 //pelicula[titulo='Casablanca']
@@ -167,7 +167,7 @@ Resultado:
 
 ---
 
-## Buscar películas dirigidas por Billy Wilder
+### Buscar películas dirigidas por Billy Wilder
 
 ```xpath
 //pelicula[director='Billy Wilder']
@@ -181,7 +181,7 @@ Resultado:
 
 ---
 
-## Buscar películas estrenadas en 1942
+### Buscar películas estrenadas en 1942
 
 ```xpath
 //pelicula[@estreno='1942']
@@ -195,7 +195,7 @@ Resultado:
 
 ---
 
-## Buscar películas de más de 120 minutos
+### Buscar películas de más de 120 minutos
 
 ```xpath
 //pelicula[@minutos > 120]
@@ -209,7 +209,7 @@ Resultado:
 
 ---
 
-## Buscar intérpretes por papel
+### Buscar intérpretes por papel
 
 ```xpath
 //interprete[@papel='Rick Blaine']
@@ -225,9 +225,9 @@ Resultado:
 
 ---
 
-# Consultas utilizando funciones
+## Consultas utilizando funciones
 
-## Obtener la primera película
+### Obtener la primera película
 
 ```xpath
 //pelicula[1]
@@ -235,7 +235,7 @@ Resultado:
 
 ---
 
-## Obtener la segunda película
+### Obtener la segunda película
 
 ```xpath
 //pelicula[position()=2]
@@ -243,7 +243,7 @@ Resultado:
 
 ---
 
-## Obtener la última película
+### Obtener la última película
 
 ```xpath
 //pelicula[last()]
@@ -251,7 +251,7 @@ Resultado:
 
 ---
 
-## Contar películas
+### Contar películas
 
 ```xpath
 count(//pelicula)
@@ -265,7 +265,7 @@ Resultado:
 
 ---
 
-## Contar guionistas
+### Contar guionistas
 
 ```xpath
 count(//guionista)
@@ -279,7 +279,7 @@ Resultado:
 
 ---
 
-## Buscar títulos que contengan una palabra
+### Buscar títulos que contengan una palabra
 
 ```xpath
 //titulo[contains(text(),'Apart')]
@@ -293,7 +293,7 @@ Resultado:
 
 ---
 
-## Buscar elementos cuyo nombre empiece por "t"
+### Buscar elementos cuyo nombre empiece por "t"
 
 ```xpath
 //*[starts-with(name(),'t')]
@@ -307,9 +307,9 @@ Resultado:
 
 ---
 
-# Consultas complejas
+## Consultas complejas
 
-## Películas con más de un guionista
+### Películas con más de un guionista
 
 ```xpath
 //pelicula[count(guion/guionista) > 1]
@@ -323,7 +323,7 @@ Resultado:
 
 ---
 
-## Películas dirigidas por Billy Wilder y estrenadas en 1960
+### Películas dirigidas por Billy Wilder y estrenadas en 1960
 
 ```xpath
 //pelicula[
@@ -341,7 +341,7 @@ Resultado:
 
 ---
 
-## Películas estrenadas después de 1950
+### Películas estrenadas después de 1950
 
 ```xpath
 //pelicula[@estreno > 1950]
@@ -355,7 +355,7 @@ Resultado:
 
 ---
 
-## Títulos y directores en una sola consulta
+### Títulos y directores en una sola consulta
 
 ```xpath
 //titulo | //director
@@ -372,7 +372,7 @@ Billy Wilder
 
 ---
 
-## Obtener el director de Casablanca
+### Obtener el director de Casablanca
 
 ```xpath
 //titulo[.='Casablanca']/../director
@@ -386,7 +386,7 @@ Resultado:
 
 ---
 
-# Casos típicos de examen
+## Casos típicos de examen
 
 ## Ejercicio tipo 1
 
@@ -458,7 +458,7 @@ Obtener las películas con más de un guionista.
 
 ---
 
-# Resumen de consultas habituales
+## Resumen de consultas habituales
 
 | Objetivo | Consulta XPath |
 |-----------|----------------|
@@ -475,7 +475,7 @@ Obtener las películas con más de un guionista.
 
 ---
 
-# Actividades prácticas
+## Actividades prácticas
 
 ??? question "Actividad 1. Consultas básicas"
 

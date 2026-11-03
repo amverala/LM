@@ -50,7 +50,7 @@ El resultado será mucho más fácil de interpretar para el usuario.
 
 ---
 
-# El proceso de transformación
+## El proceso de transformación
 
 Una transformación XSLT necesita tres elementos:
 
@@ -114,7 +114,7 @@ Durante la transformación:
 
 ---
 
-# Estructura básica de una hoja XSLT
+## Estructura básica de una hoja XSLT
 
 Una hoja XSLT también es un documento XML.
 
@@ -184,7 +184,7 @@ e instrucciones HTML como:
 
 ---
 
-# La plantilla principal
+## La plantilla principal
 
 Toda transformación suele comenzar con una plantilla principal.
 
@@ -258,7 +258,7 @@ comienza la transformación desde el nodo raíz.
 
 ---
 
-# Mezclando XSLT y HTML
+## Mezclando XSLT y HTML
 
 Una de las características más importantes de XSLT es que permite combinar:
 
@@ -303,7 +303,7 @@ pertenecen a HTML.
 
 ---
 
-# Principales elementos de XSLT
+## Principales elementos de XSLT
 
 A lo largo de la unidad trabajaremos con los siguientes elementos:
 
@@ -337,7 +337,7 @@ B --> H[xsl:sort]
 
 ---
 
-# Relación entre XPath y XSLT
+## Relación entre XPath y XSLT
 
 XPath y XSLT trabajan conjuntamente.
 
@@ -368,7 +368,7 @@ es una instrucción XSLT.
 
 ---
 
-# Flujo completo de transformación
+## Flujo completo de transformación
 
 ```mermaid
 flowchart TD
@@ -388,7 +388,7 @@ C --> D
 
 ---
 
-# Actividades prácticas
+## Actividades prácticas
 
 ??? question "Actividad 1. Identificando elementos"
 
@@ -545,7 +545,7 @@ C --> D
 
 ---
 
-# Resumen
+## Resumen
 
 !!! success "Ideas clave"
 

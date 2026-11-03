@@ -104,7 +104,7 @@ Utiliza el siguiente documento XML para todas las actividades:
 
 ---
 
-# Bloque 1. Primeras transformaciones
+## Bloque 1. Primeras transformaciones
 
 ??? question "Ejercicio 1. Mostrar las asignaturas"
 
@@ -249,7 +249,7 @@ Utiliza el siguiente documento XML para todas las actividades:
 
 ---
 
-# Bloque 2. Generación de HTML
+## Bloque 2. Generación de HTML
 
 ??? question "Ejercicio 6. Tabla básica"
 
@@ -308,7 +308,7 @@ Utiliza el siguiente documento XML para todas las actividades:
 
 ---
 
-# Bloque 3. Condicionales
+## Bloque 3. Condicionales
 
 ??? question "Ejercicio 9. Destacar tareas importantes"
 
@@ -402,18 +402,8 @@ Utiliza el siguiente documento XML para todas las actividades:
 
 ---
 
-# Entrega recomendada
 
-Para cada ejercicio:
-
-1. Guarda el XML utilizado.
-2. Guarda la hoja XSLT desarrollada.
-3. Genera el HTML resultante.
-4. Incluye una captura del resultado obtenido.
-
----
-
-# Objetivos trabajados
+## Objetivos trabajados
 
 !!! success "Competencias desarrolladas"
 
@@ -435,7 +425,7 @@ Para cada ejercicio:
 
 ---
 
-# Preparación para las actividades evaluables
+## Preparación para las actividades evaluables
 
 !!! info "Siguiente paso"
 

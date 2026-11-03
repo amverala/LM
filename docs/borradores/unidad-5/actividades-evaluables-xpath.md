@@ -22,7 +22,7 @@ Para resolverlas será necesario aplicar:
 
 ## Documento XML de referencia
 
-Utiliza el documento XML de vehículos empleado durante la unidad.
+Utiliza el documento XML de vehículos empleado en las actividades voluntarias Xpath
 
 ---
 
@@ -56,7 +56,7 @@ Utiliza el documento XML de vehículos empleado durante la unidad.
 
 ---
 
-# Entrega
+## Entrega
 
 Cada actividad deberá incluir:
 
@@ -66,7 +66,7 @@ Cada actividad deberá incluir:
 
 ---
 
-# Criterios de evaluación
+## Criterios de evaluación
 
 Se valorará:
 
@@ -79,7 +79,7 @@ Se valorará:
 
 ---
 
-# Recomendaciones
+## Recomendaciones
 
 !!! tip "Antes de entregar"
 
