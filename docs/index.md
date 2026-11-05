@@ -94,7 +94,7 @@ En este sitio encontrarás apuntes, actividades, ejemplos y recursos para aprend
 | Unidad 3 · Validación XML y DTD | ✅ Disponible |
 | Unidad 4 · Documentos XML y XSD | ✅ Disponible |
 | Unidad 5 · XPath y XSLT |  ✅ Disponible |
-| Unidad 6 ·  | ⏳ Próximamente |
+| Unidad 6 · HTML | ⏳ Próximamente |
 
 !!! info "Próxima publicación"
        La Unidad 6 dedicada a HTML se publicará próximamente.
