@@ -49,11 +49,9 @@ En este sitio encontrarás apuntes, actividades, ejemplos y recursos para aprend
 
     Aprende a consultar información dentro de documentos XML mediante XPath y a transformar documentos XML utilizando XSLT.
 
-    Próximamente
+    [Abrir unidad](unidad-5/){ .md-button }
 
-   <!-- [Abrir unidad](unidad-5/){ .md-button }
 
-<!--
 -   **Unidad 6 · HTML**
 
     ---
@@ -95,10 +93,8 @@ En este sitio encontrarás apuntes, actividades, ejemplos y recursos para aprend
 | Unidad 2 · XML y documentos bien formados | ✅ Disponible |
 | Unidad 3 · Validación XML y DTD | ✅ Disponible |
 | Unidad 4 · Documentos XML y XSD | ✅ Disponible |
-| Unidad 5 · XPath y XSLT |  ⏳ Próximamente|
-<!--| Unidad 5 · XPath y XSLT |  ✅ Disponible |
-<!--| Unidad 6 ·  | ⏳ Próximamente |-->
+| Unidad 5 · XPath y XSLT |  ✅ Disponible |
+| Unidad 6 ·  | ⏳ Próximamente |
 
 !!! info "Próxima publicación"
-    La Unidad 5 dedicada a XPath y XSLT se publicará próximamente
-<!--    La Unidad 6 dedicada a HTML se publicará próximamente.-->
+       La Unidad 6 dedicada a HTML se publicará próximamente.
